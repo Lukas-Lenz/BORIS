@@ -29,3 +29,26 @@ body {
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
   text-align: start;
 }
+
+
+
+:root {
+    --base-red: #9f2d2d;
+    --text-white: #fff;
+}
+
+.white-on-red {
+    background-color: var(--base-red);
+    color: var(--text-white);
+}
+
+.white-on-red a {
+    color: var(--text-white)
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    line-height: 3em;
+}

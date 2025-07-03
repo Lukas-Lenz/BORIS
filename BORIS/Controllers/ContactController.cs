@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using BORIS.Models;
 
 namespace BORIS.Controllers
 {
@@ -12,7 +13,15 @@ namespace BORIS.Controllers
         [HttpGet]
         public IActionResult ContactForm()
         {
-            var model = new ContactController()
+            return View();
         }
+
+        [HttpPost]
+        public IActionResult Contact(ContactViewModel contactData)
+        {
+            return View();
+        }
+
+        
     }
 }
