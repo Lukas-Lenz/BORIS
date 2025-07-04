@@ -19,13 +19,16 @@
 	<!-- Preferred Specialisation -->
 	<div class="form-field">
 		<label asp-for="PreferredSpecialisation" class="form-label"></label>
-		@Html.DropDownListFor(m => m.PreferredSpecialisation, SpecialisationList.SelectionItems,)
+		<select asp-for="PreferredSpecialisation" 
+			asp-items=@SpecialisationList.SelectionItems
+			></select>
 	</div>
 	<!-- Location -->
-	<div>
-		<label asp-for="PreferredSpecialisation"
+	<div class="form-field">
+		<label asp-for="PreferredLocation" class="form-label"></label>
+		<select asp-for="PreferredLocation" asp-itemid=""></select>
 	</div>
 	<!-- Todo: consent checkmark -->
 	<!-- Send button -->
-	<button type="submit" class="bigbutton white-on-red"></button>
+	<button type="submit" class="bigbutton white-on-red">Absenden</button>
 </form>
