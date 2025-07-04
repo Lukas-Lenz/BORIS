@@ -17,11 +17,28 @@ namespace BORIS.Controllers
         }
 
         [HttpPost]
-        public IActionResult Contact(ContactViewModel contactData)
+        public IActionResult ContactForm(ContactViewModel contactData)
+        {
+            ModelState.ClearValidationState(nameof(ContactViewModel));
+
+            if(!TryValidateModel(contactData, nameof(ContactViewModel)))
+            {
+                return View(contactData);
+            }
+
+            /*
+             * Save: 
+             * - submitted data
+             * - date and time
+             */
+
+            return RedirectToAction("FormSent");
+        }
+
+        public IActionResult FormSent()
         {
             return View();
         }
-
         
     }
 }

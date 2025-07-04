@@ -10,16 +10,16 @@ namespace BORIS.Models
         
     }
 
-    public class SpecialisationList
+    public static class SpecialisationList
     {
-        public List<SelectListItem> SelectionItems => new()
-        {
+        public static List<SelectListItem> SelectionItems =
+        [
             new SelectListItem { Text = "Keine Auswahl", Value = "NONE" },
             new SelectListItem { Text = "Systemintegration", Value="FISI" },
             new SelectListItem { Text = "Anwendungsentwicklung", Value ="FIAE" },
             new SelectListItem { Text = "Daten- und Prozessanalyse", Value = "FIDPA"}
             
-        };
+        ];
 
     }
 }

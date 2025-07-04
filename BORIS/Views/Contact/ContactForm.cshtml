@@ -1,3 +1,31 @@
 ﻿@model BORIS.Models.ContactViewModel
 
-@Html.EditorForModel(Model)
+
+<form asp-controller="Contact" asp-action="ContactForm" method="post" class="contact-form">
+	<h2>Kontaktieren Sie uns</h2>
+	
+	<!-- Name -->
+	<div class="form-field">
+		<label asp-for="Name" class="form-label"></label>
+		<input asp-for="Name" class="form-input" />
+		<span asp-validation-for="Name" class="form-error"></span>
+	</div>
+	<!-- Email -->
+	<div class="form-field">
+		<label asp-for="EMail" class="form-label"></label>
+		<input asp-for="EMail" class="form-input" />
+		<span asp-validation-for="EMail" class="form-error"></span>
+	</div>
+	<!-- Preferred Specialisation -->
+	<div class="form-field">
+		<label asp-for="PreferredSpecialisation" class="form-label"></label>
+		@Html.DropDownListFor(m => m.PreferredSpecialisation, SpecialisationList.SelectionItems,)
+	</div>
+	<!-- Location -->
+	<div>
+		<label asp-for="PreferredSpecialisation"
+	</div>
+	<!-- Todo: consent checkmark -->
+	<!-- Send button -->
+	<button type="submit" class="bigbutton white-on-red"></button>
+</form>

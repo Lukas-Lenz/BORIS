@@ -14,8 +14,9 @@ namespace BORIS.Models
         public string PreferredLocation { get; set; }
         public Specialisation? PreferredSpecialisation { get; set; }
 
-        [Required]
-        [Display(Name = "Ich stimme zu, dass meine Daten ")]
+        [Range(typeof(bool), "true", "true", ErrorMessage = "Wir brauchen Ihre Zustimmung, " +
+            "um Sie kontaktieren zu dürfen.")]
+        [Display(Name = "Ich stimme zu, dass meine Kontaktdaten für ein Jahr ")]
         public bool DataConsent { get; set; }
 
     }
