@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maxim-scale=1, user-scalable=no" />
     <title>@ViewData["Title"] - BORIS</title>
     <script type="importmap"></script>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
@@ -11,7 +11,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm white-on-red">
+        <nav class="navbar navbar-expand-sm mb-3 white-on-red">
             <div class="container-fluid d-flex flex-row justify-content-evenly">
                 <div id="navbar-left" class="navbar-div">
                     <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
@@ -29,7 +29,10 @@
                                 <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                             </li>
                             <li>
-                                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Umschulung</a>
+                                <a class="nav-link" asp-area="" asp-controller="Umschulung" asp-action="Index">Umschulungen</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" asp-area="" asp-controller="Weiterbildung" asp-action="Index">Weiterbildungen</a>
                             </li>
                             <li>
                                 <a class="nav-link" asp-area="" asp-controller="Contact" asp-action="ContactForm">Kontakt</a>
@@ -64,6 +67,7 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/lib/jquery-ajax-unobtrusive/jquery.unobtrusive-ajax.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

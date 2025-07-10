@@ -1,0 +1,20 @@
+﻿@model List<ProgramInfo>
+
+<h1>Kursangebot</h1>
+
+@foreach(ProgramInfo program in Model)
+{
+	// create a card with title + all Info
+	<a asp-controller="Navi" asp-action="LoadProgramDescription"
+	asp-route-program=@(program.Name)
+	data-ajax="true" data-ajax-update="#ProgramContainer">
+		<div class="card white-on-red text-center p-2 py-4">
+			<h3>@(program.Name)</h3>
+			@foreach(var (key, val) in program.Info)
+			{
+				<p>@val</p>
+			}
+		</div>
+	</a>
+
+}

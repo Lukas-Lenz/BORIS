@@ -18,17 +18,22 @@
 	</div>
 	<!-- Preferred Specialisation -->
 	<div class="form-field">
-		<label asp-for="PreferredSpecialisation" class="form-label"></label>
+		<label asp-for="PreferredSpecialisation" class="form-label">Interessiert an...</label>
 		<select asp-for="PreferredSpecialisation" 
 			asp-items=@SpecialisationList.SelectionItems
 			></select>
 	</div>
 	<!-- Location -->
 	<div class="form-field">
-		<label asp-for="PreferredLocation" class="form-label"></label>
+		<label asp-for="PreferredLocation" class="form-label">Standort</label>
 		<select asp-for="PreferredLocation" asp-itemid=""></select>
 	</div>
 	<!-- Todo: consent checkmark -->
+	<div class="form-field">
+		<input asp-for="DataConsent" type="checkbox"/>
+		<label asp-for="DataConsent">Ich stimme zu, dass meine Daten für ein Jahr zwecks 
+			lorem ipsum gespeichert werden.</label>
+	</div>
 	<!-- Send button -->
 	<button type="submit" class="bigbutton white-on-red">Absenden</button>
 </form>

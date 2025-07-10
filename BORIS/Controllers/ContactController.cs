@@ -19,13 +19,9 @@ namespace BORIS.Controllers
         [HttpPost]
         public IActionResult ContactForm(ContactViewModel contactData)
         {
-            ModelState.ClearValidationState(nameof(ContactViewModel));
 
-            if(!TryValidateModel(contactData, nameof(ContactViewModel)))
-            {
+            if(!ModelState.IsValid)
                 return View(contactData);
-            }
-
             /*
              * Save: 
              * - submitted data

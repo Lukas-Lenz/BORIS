@@ -31,19 +31,16 @@ body {
 .white-on-red {
     background-color: var(--base-red);
     color: var(--text-white);
+    text-decoration: none;
 }
 
 .white-on-red a {
-    color: var(--text-white)
+    color: var(--text-white);
+    text-decoration: none;
 }
 
-.navbar-heuer {
-    display: flex;
-    padding-left: 20 px;
-    padding-right: 20px;
-    height: 3em;
-    position: sticky;
-    box-shadow: var(--header-shadow);
+a[css-underline="none"]{
+    text-decoration: none !important;
 }
 
 .navbar-heuer a {
@@ -89,4 +86,8 @@ img {
 
 form {
 
+}
+
+input[type="checkbox"]:checked {
+    background-color: var(--base-red);
 }

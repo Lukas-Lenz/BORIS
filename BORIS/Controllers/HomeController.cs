@@ -6,11 +6,14 @@ namespace BORIS.Controllers;
 
 public class HomeController : Controller
 {
+    List<ProgramInfo> programSelection;
+
     private readonly ILogger<HomeController> _logger;
 
     public HomeController(ILogger<HomeController> logger)
     {
         _logger = logger;
+
     }
 
     public IActionResult Index()
@@ -27,5 +30,9 @@ public class HomeController : Controller
     public IActionResult Error()
     {
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+    }
+    public IActionResult LoadProgramDescription(List<ProgramInfo> program)
+    {
+        return PartialView("_ProgramDescription", program);
     }
 }
