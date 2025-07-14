@@ -47,8 +47,10 @@ namespace BORIS.Services
                 return GetDefaults();
         }
 
+        
         public ProgramInfo GetProgramDescription(string programKey)
         {
+            return new ProgramInfo("Dummy", new Dictionary<string, string>());
 
         }
     }

@@ -2,6 +2,13 @@
 
 namespace BORIS.Models
 {
+
+    public class Location
+    {
+        public int ID { get; init; }
+        public string Name { get; set; }
+    }
+
     public class LocationList
     {
         public static List<SelectListItem> SelectionItems =

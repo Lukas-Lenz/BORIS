@@ -1,10 +1,18 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using BORIS.Models;
+using BORIS.Data;
 
 namespace BORIS.Controllers
 {
     public class ContactController : Controller
     {
+        private readonly AppDbContext _context;
+
+        public ContactController(AppDbContext context)
+        {
+            _context = context;
+        }
+
         public IActionResult Index()
         {
             return View();
@@ -19,6 +27,7 @@ namespace BORIS.Controllers
         [HttpPost]
         public IActionResult ContactForm(ContactViewModel contactData)
         {
+            contactData.ID = Guid.NewGuid();
 
             if(!ModelState.IsValid)
                 return View(contactData);
@@ -27,6 +36,9 @@ namespace BORIS.Controllers
              * - submitted data
              * - date and time
              */
+            _context.Add(contactData);
+            _context.SaveChanges();
+            
 
             return RedirectToAction("FormSent");
         }

@@ -1,9 +1,11 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BORIS.Models
 {
     public class ContactViewModel
     {
+        public Guid? ID { get; set; }
 
         [Required(ErrorMessage = "Bitte geben Sie einen Namen an")]
         public string Name { get; set; }
@@ -14,6 +16,7 @@ namespace BORIS.Models
         public string PreferredLocation { get; set; }
         public Specialisation? PreferredSpecialisation { get; set; }
 
+        [NotMapped]
         [Range(typeof(bool), "true", "true", ErrorMessage = "Wir brauchen Ihre Zustimmung, " +
             "um Sie kontaktieren zu dürfen.")]
         [Display(Name = "Ich stimme zu, dass meine Kontaktdaten für ein Jahr ")]

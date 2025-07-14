@@ -4,6 +4,7 @@ namespace BORIS.Models
 {
     public class Specialisation
     {
+        public int ID { get; init; }
         public string Title { get; set; }
         public string Description { get; set; }
 
