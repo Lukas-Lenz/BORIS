@@ -1,5 +1,12 @@
 ﻿@model BORIS.Models.ContactViewModel
 
+<nav aria-label="breadcrumb">
+	<ol class="breadcrumb">
+		<li class="breadcrumb-item"><a asp-controller="Home">Home</a></li>
+		<li class="breadcrumb-item"><a asp-controller="Contact">Kontakt</a></li>
+		<li class="breadcrumb-item active" aria-current="page">Kontaktformular</li>
+	</ol>
+</nav>
 
 <form asp-controller="Contact" asp-action="ContactForm" method="post" class="contact-form">
 	<h2>Kontaktieren Sie uns</h2>

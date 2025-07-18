@@ -14,7 +14,7 @@ namespace BORIS.Models
         [Required(ErrorMessage = "Bitte geben Sie eine E-Mail an")]
         public string EMail { get; set; }
         public string PreferredLocation { get; set; }
-        public Specialisation? PreferredSpecialisation { get; set; }
+        public string PreferredSpecialisation { get; set; }
 
         [NotMapped]
         [Range(typeof(bool), "true", "true", ErrorMessage = "Wir brauchen Ihre Zustimmung, " +

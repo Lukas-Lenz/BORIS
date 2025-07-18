@@ -39,7 +39,6 @@ namespace BORIS.Controllers
             _context.Add(contactData);
             _context.SaveChanges();
             
-
             return RedirectToAction("FormSent");
         }
 

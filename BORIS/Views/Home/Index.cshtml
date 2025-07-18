@@ -1,6 +1,59 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+	ViewData["Title"] = "Home Page";
 }
 
-<div id="NaviContainer" class="container">
+<div class="h-100 justify-content-center align-content-center ">
+
+	<div class="card-deck row h-50">
+
+		<a asp-controller="Course" asp-action="ShowUmschulungen" class="col">
+			<div class="card">
+				<h2>Umschulungen</h2>
+				<p></p>
+				<ul>
+					<li> ... </li>
+					<li> ... </li>
+				</ul>
+			</div>
+		</a>
+
+		<a asp-controller="Course" asp-action="ShowWeiterbildungen" class="col">
+			<div class="card">
+				<h2>Weiterbildungen</h2>
+				<p></p>
+				<ul>
+					<li> ... </li>
+					<li> ... </li>
+				</ul>
+			</div>
+		</a>
+
+	</div>
+
+
+	<div class="card-deck row h-25">
+
+		<a asp-controller="Navi" class="col">
+			<div class="card">
+				<h3>Lotse</h3>
+				<p>Hilfe bei der Auswahl in unserem Angebot</p>
+			</div>
+		</a>
+
+		<a asp-controller="Contact" asp-action="ContactForm" class="col">
+			<div class="card home-card">
+				<h3>Contact</h3>
+				<p>Register your interest or leave a message</p>
+			</div>
+		</a>
+
+		<a asp-controller="Navi" class="col">
+			<div class="card">
+				<h3>Lotse</h3>
+				<p>Hilfe bei der Auswahl in unserem Angebot</p>
+			</div>
+		</a>
+
+	</div>
+
 </div>
